@@ -1,0 +1,19 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <input type="button" value="선불카드 사용금액 계산기" onclick="
+            let paycode = prompt('결제 방식을 코드로 입력하세요.\nA : 선불 카드 충전 시 10% 할인(대구행복페이 등)\nB : 선불 카드 충전 시 10% 캐시백 혹은 포인트 제공(경산 그리고카드 등)')
+            let cost = Number(prompt('선불 카드 결제 금액을 입력하세요.'));
+            let realcost = (paycode=='A')?cost*9/10:cost*10/11;
+            alert('실제 사용 금액은 ' + Math.floor(realcost) + '원입니다.')
+        ">
+        <script>
+            function sum(a, b) {
+                return a+b;
+            }
+            console.log(sum(10,20));
+        </script>
+    </body>
+</html>
