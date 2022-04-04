@@ -6,28 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        h1{
-            border-bottom:10px solid purple;
-            padding:30px;
-        }
-        a{
-            text-decoration: none;
-        }
-        body{
-            font-family: 'Oswald', sans-serif;
-        }
-        @media all and (min-width: 720px){
-            #container{
-                display: grid;
-                grid-template-columns: 200px 1fr;
-            }
-        }
-        @media all and (max-width: 720px){
-            #container{
-                display: grid;
-            }
-        }
+
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KMK1DRGC8E"></script>
@@ -40,6 +21,36 @@
 </head>
 <body>
     <!--Dark and Clear Mode-->
+    <!--One button-->
+    
+    <script>
+        function night() {
+            let atags = document.querySelectorAll('a');
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'gray';
+            for (let i = 0; i < atags.length; i++) {
+                atags[i].style.color = 'gray';
+            }
+        }function day() {
+            let atags = document.querySelectorAll('a');
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            for (let i = 0; i < atags.length; i++) {
+                atags[i].style.color = 'black';
+            }
+        }
+    </script>
+    <input type="button" id="darkmode" value="Night" onclick="
+        if(this.value === 'Night'){
+            night();
+            this.value = 'Day';
+        } else {
+            day();
+            this.value = 'Night';
+        }
+        ">
+   
+    <!-- Two buttons 
     <input type="button" value="Night" onclick="
         document.querySelector('body').style.backgroundColor='black';
         document.querySelector('body').style.color='gray';
@@ -48,6 +59,7 @@
     document.querySelector('body').style.backgroundColor='white';
     document.querySelector('body').style.color='black';
     ">
+    -->
     <h1><a href="index.html">DAEGU-AI-SCHOOL STUDY NOTE</a></h1>   
     <div id="container">
         <ol>
